@@ -1,0 +1,47 @@
+    /*Barras Titulos*/
+.bag-bar {
+    background-color: #400000;
+}
+.title_main {
+    font-size: 5rem;
+    color: #fff;
+}
+
+    /*imagenes subidas*/
+.img-height {
+    height: 196.52px;
+}
+
+.size-img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+    /*Estilos imagenes y caracteriscas publicadas*/
+.color-title-img {
+    color: #520609;
+}
+.content-description-img {
+    width: 80%;
+    background-color: #eee;
+    margin: 30px auto;
+    border: solid 2px #555;
+    border-radius: 10%;
+    padding: 15px;
+}
+
+.style-description-img {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.footer-bar-img {
+    background-color: #9f9bb8;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+

@@ -1,0 +1,139 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url(../images/Fondo-de-pantalla_principal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contenedor__principal {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+
+/*Logo*/
+.logo {
+    width: 220px;
+    height: 150px;
+    margin: 0px 0px;
+}
+
+.imagen__logo {
+    width: 200px;
+    height: 125px;
+    margin: 20px 40px;
+}
+
+
+
+/*Textos titulos*/
+.caja__elementos {
+    width: 80%;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -40px;
+    padding: 30px;
+}
+
+.contenedor__texto {
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+}
+
+.titulo {
+    color: #fff;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.subTitulo__mensaje {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+/*Botones*/
+
+.contenedor__botones {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 20px 100px;
+    margin-top: -40px;
+}
+
+.botones__principal {
+
+    background-color: #2b4c7ecc;
+    display: inline;
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+    margin: 10px 160px;
+    border: 5px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contenedor__botones button:hover{
+    background-color: #ffffff80;
+}
+
+.contenedor__botones button:hover a{
+    color: #2b4c7ecc;
+    font-weight: bold;
+}
+
+
+.contenedor__botones button:active {
+    background-color: #2b4c7ecc;
+}
+
+.contenedor__botones button:active a{
+    color: #fff;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 850px) {
+     
+
+    .contenedor__texto {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 50px;
+    }
+
+    .subTitulo__mensaje {
+        font-size: 12px;
+    }
+
+    .contenedor__botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0px 0px;
+    }
+
+}

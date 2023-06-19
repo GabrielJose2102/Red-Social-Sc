@@ -1,0 +1,121 @@
+<head>
+  <link rel="stylesheet" href="/public/css/upload.css" />
+  <link rel="stylesheet" href="/public/css/normalize.css" />
+</head>
+
+<div class="card">
+
+  <div class="card-header bag-bar">
+    <h3 class="card-title text-white">
+      <i class="far fa-image p-2"></i>upload and image
+    </h3>
+  </div>
+
+  <div class="card-body">
+    <form action="/images" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="custom-file">
+            <input
+              type="file"
+              name="image"
+              class="custom-file-input"
+              id="inputGroup"
+              aria-describedby="inputGroupFileAddon" required/>
+            <label class="custom-file-label" for="inputGroupFile"></label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <input
+          type="text"
+          name="title"
+          class="form-control"
+          placeholder="Titulo de la imagen"
+          required
+        />
+      </div>
+      <div class="form-group mt-2">
+        <textarea
+          name="description"
+          rows="2"
+          class="form-control"
+          placeholder="Descripcion Imagen"
+        ></textarea>
+        </div>
+        <div class="form-group mt-2">
+        <input
+          type="password"
+          name="codigo"
+          class="form-control"
+          placeholder="Ingrese el codigo de publicacion"
+          required
+        />
+      </div>
+      <div class="form-group mt-2">
+        <button class="btn btn-success" id="btn-success">
+          <i class="fa fa-upload p-1"></i>
+          Subir Publicacion
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card mt-4">
+  <div class="card-header bag-bar text-white">
+    <h3><i class="far fa-images p-2"></i> Imagenes Subidas</h3>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      {{#each images}}
+        <div class="col-md-4 ">
+          <a href="/images/{{_id}}">
+            <img
+              src="/public/upload/{{filename}}"
+              alt=""
+              class="w-100 h-100 img-thumbnail"
+            />
+          </a>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      {{#each images}}
+        <div class="card">
+          <div class="card-header d-flex justify-content-between aling-items-center">
+            <h2 class="color-title-img">{{title}}</h2>
+          </div>
+
+          <div class="card-body">
+            <div class="text-center">
+              <img src="/public/upload/{{filename}}" class="img-fluid size-img" />
+            </div>
+            <div class="content-description-img">
+                <p class="style-description-img">{{description}}</p>
+            </div>
+          </div>
+
+          <div class="card-footer d-flex justify-content-between align-items-center space footer-bar-img">
+            <p>
+              <span class="likes-count">{{likes}}</span>
+              <i class="fas fa-heart"></i>
+            </p>
+            <p>
+              <i class="fas fa-eye p-1"></i>{{views}}
+            </p>
+            <p>
+              <i class="far fa-clock p-1"></i>
+              {{timeago timestamp}}
+            </p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+</div>

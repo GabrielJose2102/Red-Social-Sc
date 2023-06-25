@@ -1,8 +1,8 @@
 const express = require('express');
-const config = require('./server/config');
+const config = require('./src/server/config');
 
 //database
-require('./database');
+require('./src/database');
 const app = config(express());
 
 //starting the server

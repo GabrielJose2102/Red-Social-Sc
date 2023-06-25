@@ -1,6 +1,6 @@
 module.exports = {
 
     database: {
-        URI: 'mongodb+srv://gabrieltorrealba09:WJM8jsgo3jDmjGuV@cluster0.qzruebg.mongodb.net/?retryWrites=true&w=majority'
+        URI: 'mongodb+srv://VozGayona:0TsxRa1lqoQ5ZdTT@cluster0.qzruebg.mongodb.net/VozGayona?retryWrites=true&w=majority'
     }
 }

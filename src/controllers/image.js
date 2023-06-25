@@ -4,7 +4,6 @@ const fs = require('fs-extra');
 const md5 = require('md5');
 
 const { Image, Comment } = require('../models');
-const sidebar = require('../helpers/sidebar');
 
 const ctrl = {};
 
@@ -20,7 +19,7 @@ ctrl.index = async (req, res) => {
         viewModel.image = image;
         const comments = await Comment.find({image_id: req.params.image_id}).lean();
         viewModel.comments = comments;
-        viewModel = await sidebar(viewModel);
+
         res.render("image.hbs", viewModel);
     } else {
         res.redirect('/');

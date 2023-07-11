@@ -1,3 +1,4 @@
+/* importacion paquetes y funciones */
 const path = require('path');
 const { randomNumber, incrementViews } = require('../helpers/libs');
 const fs = require('fs-extra');
@@ -7,6 +8,7 @@ const { Image, Comment } = require('../models');
 
 const ctrl = {};
 
+/* Apertura modulo imagen detallada  */
 ctrl.index = async (req, res) => {
     let viewModel = { image: {}, comments: {}}
 
@@ -25,8 +27,9 @@ ctrl.index = async (req, res) => {
         res.redirect('/');
     }
     
-};
+}
 
+/* Subida imagen base dato */
 ctrl.create =  (req, res) => {
 
         const saveImage = async () => {
@@ -41,7 +44,7 @@ ctrl.create =  (req, res) => {
                 const targetPath = path.resolve(`src/public/upload/${imgUrl}${ext}`);
                 let confirm = req.body.codigo;
                 
-                if (confirm == '1234') {
+                if (confirm == 'VG2023RP') {
 
                     if (ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
                         await fs.rename(imageTempPath, targetPath);
@@ -51,8 +54,7 @@ ctrl.create =  (req, res) => {
                             description: req.body.description
                         });
                         const imageSaved = await newImg.save();
-                        res.redirect('/principal');
-                        //res.send('¡Works!'); 
+                        res.redirect('/principal'); 
                     } else {
                         await fs.unlink(imageTempPath);
                         res.redirect('/format');
@@ -68,6 +70,7 @@ ctrl.create =  (req, res) => {
 
 };
 
+/* funcion like */
 ctrl.like = async (req, res) => {
     const image = await Image.findOne({_id: req.params.image_id});
     if (image) {
@@ -79,6 +82,7 @@ ctrl.like = async (req, res) => {
     }
 };
 
+/* funcion Agregar comentarios imagen */
 ctrl.comment = async (req, res) => {
     const image = await Image.findOne({_id: req.params.image_id}).lean();
     if(image) {
@@ -90,6 +94,7 @@ ctrl.comment = async (req, res) => {
     }
 };
 
+/* funcion eliminar imagen */
 ctrl.remove = async (req, res) => {
     const image = await Image.findOne({_id: req.params.image_id});
     const img = image.filename;

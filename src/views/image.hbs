@@ -2,7 +2,7 @@
     <div class="card-header d-flex justify-content-between aling-items-center">
         <h2>{{image.title}}</h2>
         <button class="btn btn-danger" id="btn-delete" data-id="{{image._id}}">
-            <i class="fa fa-times p-1"></i>Delete
+            <i class="fa fa-times p-1"></i>Eliminar
         </button>
     </div>
 
@@ -15,7 +15,7 @@
 
     <div class="card-footer d-flex justify-content-between align-items-center">
         <button class="btn btn-success" id="btn-like" data-id="{{image._id}}">
-            <i class="fas fa-thumbs-up p-1"></i>Like
+            <i class="fas fa-thumbs-up p-1"></i>Me Gusta
         </button>
         <p>
             <span class="likes-count">{{image.likes}}</span>
@@ -35,7 +35,7 @@
     <div class="card-header d-flex justify-content-between aling-items-center">
         <h3>Coments</h3>
         <button class="btn btn-info" id="btn-toggle-comment">
-            <i class="fa fa-comment m-2"></i>Post a coment
+            <i class="fa fa-comment m-2"></i>Comentarios
         </button>
     </div>
     <div class="card-body">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group">
                     <button class="btn btn-success" id="btn-comment">
-                        <i class="fa fa-comment m-1"></i>Post
+                        <i class="fa fa-comment m-1"></i>Publicar
                     </button>
                 </div>
             </form>

@@ -1,5 +1,6 @@
 const helpers = {};
 
+/* Funcion generador codigo imagen */
 helpers.randomNumber = () => {
 
     const possible = 'abcdefghijklmnñopqrstuvwxyz0123456789';
@@ -10,6 +11,7 @@ helpers.randomNumber = () => {
     return randomNumber;
 }
 
+/* funcion incremento vistas */
 helpers.incrementViews = (image) => {
     image.views = image.views + 1;
     return image;

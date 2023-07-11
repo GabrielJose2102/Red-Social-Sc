@@ -1,4 +1,4 @@
-/* Boton Mostrar Formulario de Comentarios*/
+/* funcionabilidad Boton Mostrar Formulario de Comentarios*/
 $("#post-comment").hide();
 
 $("#btn-toggle-comment").click((e) => {
@@ -6,8 +6,8 @@ $("#btn-toggle-comment").click((e) => {
   $("#post-comment").slideToggle();
 });
 
-/* Boton de Likes */
 
+/* funcionabilidad Boton Likes */
 $("#btn-like").click(function (e) {
   e.preventDefault();
   let imgId = $(this).data("id");
@@ -18,12 +18,11 @@ $("#btn-like").click(function (e) {
   });
 });
 
-/* Boton Delete */
-
+/* funcionabilidad Boton Delete */
 $("#btn-delete").click(function (e) {
   e.preventDefault();
   let $this = $(this);
-  const response = confirm("Seguro de Eliminar la Imagen?");
+  const response = confirm("¿Seguro de Eliminar la Imagen?");
   if (response) {
     let imgId = $this.data("id");
     $.ajax({

@@ -211,3 +211,8 @@
     padding-top: 12px;
     color: #fff;
 }
+
+
+.ocultar {
+    display: none;
+}
